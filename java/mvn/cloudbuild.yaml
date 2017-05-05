@@ -1,0 +1,11 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/java/mvn:3.5-jdk-8', '-f', 'Dockerfile.3.5-jdk-8', '.']
+
+# examples
+#- name: 'gcr.io/$PROJECT_ID/maven:3.5-jdk-8'
+#  dir: 'examples/flexible_datastore'
+#  args: 'install'
+
+images:
+- 'gcr.io/$PROJECT_ID/java/mvn:3.5-jdk-8'
